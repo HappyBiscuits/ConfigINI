@@ -1,22 +1,17 @@
-
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>ConfigINI.dll</id>
+    <id>$id$</id>
     <version>$version$</version>
-    <title>ConfigINI</title>
+    <title>$title$</title>
     <authors>Luke Jackson, Alex Mcivor</authors>
-    <owners>Luke Jackson</owners>
+    <owners>Luke Jackson, Alex Mcivor</owners>
     <licenseUrl>https://github.com/HappyBiscuits/ConfigINI/blob/master/license.txt</licenseUrl>
     <projectUrl>https://github.com/HappyBiscuits/ConfigINI/</projectUrl>
-    <iconUrl>https://avatars3.githubusercontent.com/u/7890777?s=140</iconUrl>
+    <iconUrl>https://github.com/HappyBiscuits/ConfigINI/blob/master/ConfigINI/Nuget/fc_bc_Gear.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Terrarium provides a great way for developers to learn about the .NET programming model and language as they develop creatures and introduce them into a peer-to-peer ecosystem.</description>
-    <releaseNotes></releaseNotes>
-    <copyright>Copyright &#x00A9; Microsoft Corporation.  All rights reserved.</copyright>
-    <tags>sdk ecosystem game directx monogame learning</tags>
+    <description>$description$</description>
+    <copyright>Copyright 2016</copyright>
+    <tags>ini config</tags>
   </metadata>
-  <files>
-	<file src="Terrarium.Sdk\bin\$configuration$\Terrarium.Sdk.dll" target="lib\net40\" />
-  </files>
 </package>
