@@ -57,7 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Nuget\ConfigINI.nuspec" />
+    <None Include="ConfigINI.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
