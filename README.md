@@ -38,7 +38,7 @@ public enum ConfigSection
    });
    ```
 
-   The variables passed to the config values are the secion, setting and the default value for the setting.  
+   The variables passed to the config values are the section, setting and the default value for the setting.  
 
    By default ConfigINI can handle Floats, Ints and Bools however it can be easily extended.  
 
