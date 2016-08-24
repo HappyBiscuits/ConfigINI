@@ -11,6 +11,7 @@ namespace ConfigINI
 
     public class Config<TSection, TValues> where TSection : struct, IComparable where TValues : struct, IComparable
     {
+        public bool Loaded = false;
         private readonly string _configPath;
         public List<IConfigValue<TSection, TValues>> Settings;
         public List<IDynamicConfig> DynamicConfigs; 
@@ -21,6 +22,8 @@ namespace ConfigINI
             Settings = defaults;
             if (dynamicConfigs == null) DynamicConfigs = new List<IDynamicConfig>();
             else DynamicConfigs = dynamicConfigs;
+            LoadConfig();
+            SaveConfig();
         }
 
         private bool HasSetting(TSection section, TValues setting)
@@ -92,6 +95,7 @@ namespace ConfigINI
             {
                 setting.ReadData(data);
             }
+            Loaded = true;
         }
 
         public void SaveConfig()
