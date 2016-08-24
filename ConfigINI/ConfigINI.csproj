@@ -55,6 +55,7 @@
     <Compile Include="IDynamicConfig.cs" />
     <Compile Include="Values\IntConfigValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Values\StringConfigValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ConfigINI.nuspec" />

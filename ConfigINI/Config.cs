@@ -39,6 +39,11 @@ namespace ConfigINI
             return ((IntConfigValue<TSection, TValues>)GetSetting(section, setting)).Value;
         }
 
+        public string GetStringSetting(TSection section, TValues setting)
+        {
+            return ((StringConfigValue<TSection, TValues>)GetSetting(section, setting)).Value;
+        }
+
         public float GetFloatSetting(TSection section, TValues setting)
         {
             return ((FloatConfigValue<TSection, TValues>)GetSetting(section, setting)).Value;
@@ -52,6 +57,12 @@ namespace ConfigINI
         public void SetIntSetting(TSection section, TValues setting, int value)
         {
             ((IntConfigValue<TSection, TValues>)GetSetting(section, setting)).Value = value;
+            SaveConfig();
+        }
+
+        public void SetIntSetting(TSection section, TValues setting, string value)
+        {
+            ((StringConfigValue<TSection, TValues>)GetSetting(section, setting)).Value = value;
             SaveConfig();
         }
 
