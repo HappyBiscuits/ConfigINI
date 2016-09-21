@@ -26,19 +26,19 @@ namespace ConfigINI
             SaveConfig();
         }
 
-        public StringConfigValue<TSection, TValues> StringValue(TSection sec, TValues set, string val)
+        public static StringConfigValue<TSection, TValues> StringValue(TSection sec, TValues set, string val)
         {
             return new StringConfigValue<TSection, TValues>(sec, set, val);
         }
-        public IntConfigValue<TSection, TValues> IntValue(TSection sec, TValues set, int val)
+        public static IntConfigValue<TSection, TValues> IntValue(TSection sec, TValues set, int val)
         {
             return new IntConfigValue<TSection, TValues>(sec, set, val);
         }
-        public FloatConfigValue<TSection, TValues> FloatValue(TSection sec, TValues set, float val)
+        public static FloatConfigValue<TSection, TValues> FloatValue(TSection sec, TValues set, float val)
         {
             return new FloatConfigValue<TSection, TValues>(sec, set, val);
         }
-        public BoolConfigValue<TSection, TValues> BoolValue(TSection sec, TValues set, bool val)
+        public static BoolConfigValue<TSection, TValues> BoolValue(TSection sec, TValues set, bool val)
         {
             return new BoolConfigValue<TSection, TValues>(sec, set, val);
         }
