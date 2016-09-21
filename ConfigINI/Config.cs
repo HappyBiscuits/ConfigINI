@@ -26,6 +26,23 @@ namespace ConfigINI
             SaveConfig();
         }
 
+        public StringConfigValue<TSection, TValues> StringValue(TSection sec, TValues set, string val)
+        {
+            return new StringConfigValue<TSection, TValues>(sec, set, val);
+        }
+        public IntConfigValue<TSection, TValues> IntValue(TSection sec, TValues set, int val)
+        {
+            return new IntConfigValue<TSection, TValues>(sec, set, val);
+        }
+        public FloatConfigValue<TSection, TValues> FloatValue(TSection sec, TValues set, float val)
+        {
+            return new FloatConfigValue<TSection, TValues>(sec, set, val);
+        }
+        public BoolConfigValue<TSection, TValues> BoolValue(TSection sec, TValues set, bool val)
+        {
+            return new BoolConfigValue<TSection, TValues>(sec, set, val);
+        }
+
         private bool HasSetting(TSection section, TValues setting)
         {
             return Settings.Any(x => x.GetSection().Equals(section) && x.GetSetting().Equals(setting));
@@ -63,7 +80,7 @@ namespace ConfigINI
             SaveConfig();
         }
 
-        public void SetIntSetting(TSection section, TValues setting, string value)
+        public void SetStringSetting(TSection section, TValues setting, string value)
         {
             ((StringConfigValue<TSection, TValues>)GetSetting(section, setting)).Value = value;
             SaveConfig();
